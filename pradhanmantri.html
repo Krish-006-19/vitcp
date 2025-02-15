@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pradhan Mantri Awas Yojana</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            transition: 0.5s;
+        }
+        .hero-section {
+            background: url('https://source.unsplash.com/1600x900/?house') no-repeat center center/cover;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        body.dark-mode {
+            background-color: #222;
+            color: #fff;
+        }
+        .dark-mode .navbar-custom {
+            background-color: #444;
+        }
+        .dark-mode .card {
+            background-color: #333;
+            color: #fff;
+        }
+        .dark-mode footer {
+            background-color: #444;
+        }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+        }.back-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 20px;
+        background-color: #111;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 5px;
+        display: none;
+    }
+    .back-to-top:hover {
+        background-color: #666;
+    }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+                <p style="color: white;">Govt. of India - Banking Services</p>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="mudrayojana.html">mudrayojana</a></li>
+                    <li class="nav-item"><a class="nav-link" href="atmanirbharbharat.html">atma nirbhar Bharat</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contactus.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <button id="theme-toggle" class="btn btn-dark ms-3">Switch Theme</button>
+
+        </div>
+    </nav>
+    <section class="hero-section" style="background-color: lightcoral;">
+        <div class="container">
+            <h1>Pradhan Mantri Awas Yojana</h1>
+            <p>Affordable Housing for All by 2024</p>
+        </div>
+    </section>
+    
+    <section class="container my-5">
+        <h2 class="text-center">About PMAY</h2>
+        <p class="text-center">Pradhan Mantri Awas Yojana (PMAY) aims to provide affordable housing for all by 2024, ensuring every Indian has access to a permanent home.</p>
+    </section>
+    
+    <section class="container my-5">
+        <h2 class="text-center">Key Benefits</h2>
+        <div class="row text-center">
+            <div class="col-md-4">
+                <div class="card p-3">
+                    <h4>Interest Subsidy</h4>
+                    <p>Up to ₹2.67 lakh subsidy on home loans.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-3">
+                    <h4>Affordable Housing</h4>
+                    <p>Focuses on EWS, LIG, and MIG income groups.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-3">
+                    <h4>Women Empowerment</h4>
+                    <p>Encourages home ownership for women.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <button id="backToTop" class="back-to-top">Back to Top</button>
+    <script>
+       document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("mudraForm").addEventListener("submit", function (event) {
+        event.preventDefault();
+        document.getElementById("successMessage").style.display = "block";
+        setTimeout(() => {
+            document.getElementById("successMessage").style.display = "none";
+        }, 3000);
+        this.reset();
+    });
+
+    document.getElementById("pmayForm").addEventListener("submit", function (event) {
+        event.preventDefault();
+        document.getElementById("successMessage").style.display = "block";
+        setTimeout(() => {
+            document.getElementById("successMessage").style.display = "none";
+        }, 3000);
+        this.reset();
+    });
+
+    if (localStorage.getItem("theme") === "dark") {
+        document.body.classList.add("dark-mode");
+        document.getElementById("theme-toggle").textContent = "Light Mode";
+    }
+
+    document.getElementById("theme-toggle").addEventListener("click", function () {
+        document.body.classList.toggle("dark-mode");
+        if (document.body.classList.contains("dark-mode")) {
+            localStorage.setItem("theme", "dark");
+            this.textContent = "Light Mode";
+        } else {
+            localStorage.setItem("theme", "light");
+            this.textContent = "Dark Mode";
+        }
+    });
+
+    window.addEventListener("scroll", function () {
+        var backToTop = document.getElementById("backToTop");
+        if (window.scrollY > 150) {
+            backToTop.style.display = "block";
+        } else {
+            backToTop.style.display = "none";
+        }
+    });
+
+    document.getElementById("backToTop").addEventListener("click", function () {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+});
+
+    </script>
+</body>
+</html>

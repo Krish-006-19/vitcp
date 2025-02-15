@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Government of India - Financial Overview</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            transition: 0.5s;
+        }
+        body.dark-mode {
+            background-color: #222;
+            color: #fff;
+        }
+        .dark-mode .navbar-custom {
+            background-color: #444;
+        }
+        .dark-mode .card {
+            background-color: #333;
+            color: #fff;
+        }
+        .dark-mode footer {
+            background-color: #444;
+        }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+        }.back-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 20px;
+        background-color: #111;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 5px;
+        display: none;
+    }
+    .back-to-top:hover {
+        background-color: #666;
+    }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+                <p style="color: white;">Govt. of India - Banking Services</p>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="banking.html">Banking</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Schemes.html">Schemes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="nationalbudget.html">National Budget</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contactus.html">Contact</a></li>
+                </ul>
+            </div>
+            
+<button id="theme-toggle" class="btn btn-dark ms-3">Switch Theme</button>
+        </div>
+    </nav>
+
+    <header class="bg-primary text-white text-center py-5">
+        <div class="container">
+            <h1>Welcome to the Government of India - Financial Overview</h1>
+            <p>Your one-stop portal for all financial services, policies, and updates from the Government of India.</p>
+        </div>
+    </header>
+
+    <section id="overview" class="container my-5">
+        <h2 class="text-center">Overview of Financial Information</h2>
+        <p>
+            The Government of India provides a range of financial services to individuals, businesses, and state-run
+            organizations. This portal offers easy access to financial policies, budget announcements, and taxation
+            details, along with other financial resources to help citizens and investors.
+        </p>
+        <p>
+            The key areas covered in the financial domain are the national budget, economic policies, investment
+            opportunities, taxation schemes, and public sector financial information.
+        </p>
+    </section>
+
+     <div style="margin-left: 100px;margin-right: 100px;">
+        <p>
+            <div style="display: flex;justify-content: center;">
+            <h2 style="display: inline-block;" align="center">Key Functions and Contributions</h2>
+            </div>
+            <br>
+            1.Economic Growth and Stability The Ministry formulates policies that drive India’s economic development, ensuring sustainable growth and resilience in global financial markets.  
+            <br>2.Efficient Taxation System Through the introduction of GST (Goods and Services Tax) and direct tax reforms, the Ministry has simplified taxation, increasing transparency and ease of doing business.  
+            <br>3.Financial Inclusion Initiatives like Jan Dhan Yojana, Digital Payments, and UPI have expanded financial access to millions, promoting digital transactions and economic empowerment.  
+            <br>4.Infrastructure and Investment BoostPolicies like Make in India, Atmanirbhar Bharat, and National Infrastructure Pipeline have strengthened India's investment climate and global competitiveness.  
+            <br>5.Budgetary and Fiscal Management The Union Budget, crafted by the Ministry, focuses on social welfare, economic reforms, and financial prudence to balance growth and fiscal discipline.  
+            <br>6.Global Financial Leadership India, under the Finance Ministry’s leadership, actively participates in G20, IMF, and World Bank, shaping international financial policies.  
+            <br>
+            Overall, the Finance Ministry of India plays a dynamic role in fostering economic resilience, digital transformation, and inclusive growth, positioning the country as a major global financial powerhouse.
+                </p>
+     </div>
+     <button id="backToTop" class="back-to-top">Back to Top</button>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2025 Government of India - All Rights Reserved</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("mudraForm").addEventListener("submit", function (event) {
+        event.preventDefault();
+        document.getElementById("successMessage").style.display = "block";
+        setTimeout(() => {
+            document.getElementById("successMessage").style.display = "none";
+        }, 3000);
+        this.reset();
+    });
+
+    document.getElementById("pmayForm").addEventListener("submit", function (event) {
+        event.preventDefault();
+        document.getElementById("successMessage").style.display = "block";
+        setTimeout(() => {
+            document.getElementById("successMessage").style.display = "none";
+        }, 3000);
+        this.reset();
+    });
+
+    document.getElementById("budget-btn").addEventListener("click", function () {
+        alert("Redirecting to National Budget page...");
+    });
+
+    document.getElementById("policies-btn").addEventListener("click", function () {
+        alert("Redirecting to Economic Policies page...");
+    });
+
+    document.getElementById("taxation-btn").addEventListener("click", function () {
+        alert("Redirecting to Taxation page...");
+    });
+
+    if (localStorage.getItem("theme") === "dark") {
+        document.body.classList.add("dark-mode");
+        document.getElementById("theme-toggle").textContent = "Light Mode";
+    }
+
+    document.getElementById("theme-toggle").addEventListener("click", function () {
+        document.body.classList.toggle("dark-mode");
+        if (document.body.classList.contains("dark-mode")) {
+            localStorage.setItem("theme", "dark");
+            this.textContent = "Light Mode";
+        } else {
+            localStorage.setItem("theme", "light");
+            this.textContent = "Dark Mode";
+        }
+    });
+
+    window.addEventListener("scroll", function () {
+        var backToTop = document.getElementById("backToTop");
+        if (window.scrollY > 150) {
+            backToTop.style.display = "block";
+        } else {
+            backToTop.style.display = "none";
+        }
+    });
+
+    document.getElementById("backToTop").addEventListener("click", function () {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+});
+
+    </script>
+
+</body>
+
+</html>

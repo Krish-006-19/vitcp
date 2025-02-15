@@ -1,0 +1,199 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Government of India - Financial Schemes</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            transition: 0.5s;
+        }
+        .card img {
+            height: 200px;
+            object-fit: cover;
+        }
+        body.dark-mode {
+            background-color: #222;
+            color: #fff;
+        }
+        .dark-mode .navbar-custom {
+            background-color: #444;
+        }
+        .dark-mode .card {
+            background-color: #333;
+            color: #fff;
+        }
+        .dark-mode footer {
+            background-color: #444;
+        }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+        }.back-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 20px;
+        background-color: #111;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 5px;
+        display: none;
+    }
+    .back-to-top:hover {
+        background-color: #666;
+    }
+    </style>
+</head>
+
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Govt. of India - Financial Schemes</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="home.html">home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Schemes.html">Schemes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="banking.html">banking</a></li>
+                    <li class="nav-item"><a class="nav-link" href="nationalbudget.html">National Budget</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contactus.html">Contact</a></li>
+                </ul>
+            </div>
+            <button id="theme-toggle" class="btn btn-dark ms-3">Switch Theme</button>
+        </div>
+    </nav>
+
+    
+    <header class="bg-success text-white text-center py-5">
+        <div class="container">
+            <h1>Government of India - Financial Schemes</h1>
+            <p>Explore various government schemes aimed at economic development and welfare.</p>
+        </div>
+    </header>
+
+    
+    <section id="schemes" class="container my-5">
+        <h2 class="text-center">Available Financial Schemes</h2>
+        <p class="text-center">These schemes offer financial assistance to individuals, businesses, and organizations.</p>
+        
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://www.gssprojects.in/wp-content/uploads/2019/06/PMAY-Home-Loan1.jpg" class="card-img-top" alt="Scheme 1">
+                    <div class="card-body">
+                        <h5 class="card-title">PMAY - Pradhan Mantri Awaas Yojana</h5>
+                        <p class="card-text">Affordable housing scheme for urban and rural poor citizens.</p>
+                        <a href="pradhanmantri.html"><button class="btn btn-success">Learn More</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://www.probusinsurance.com/wp-content/uploads/2024/01/Pradhan-Mantri-Mudra-Yojana.jpg" class="card-img-top" alt="Scheme 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Mudra Yojana</h5>
+                        <p class="card-text">Scheme to provide financial assistance to small businesses and entrepreneurs.</p>
+                        <a href="mudrayojana.html"><button class="btn btn-success">Learn More</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://sundayguardianlive.com/wp-content/uploads/2020/11/Let%E2%80%99s-assess-the-feasibility-of-atma-nirbhar-bharat.jpg" class="card-img-top" alt="Scheme 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Atmanirbhar Bharat</h5>
+                        <p class="card-text">Self-reliant India mission to support local industries and entrepreneurs.</p>
+                        <a href="atmanirbharbharat.html"><button class="btn btn-success">Learn More</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="benefits" class="bg-light py-5">
+        <div class="container text-center">
+            <h2>Why Choose Our Schemes?</h2>
+            <p>Government financial schemes provide numerous benefits to citizens.</p>
+            <div class="row">
+                <div class="col-md-4"><i class="fas fa-hand-holding-usd fa-3x"></i><p>Financial Support</p></div>
+                <div class="col-md-4"><i class="fas fa-users fa-3x"></i><p>Inclusive Growth</p></div>
+                <div class="col-md-4"><i class="fas fa-building fa-3x"></i><p>Empower Businesses</p></div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="faq" class="container my-5">
+        <h2 class="text-center">Frequently Asked Questions</h2>
+        <div class="accordion" id="faqAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                        Who is eligible for these schemes?
+                    </button>
+                </h2>
+                <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">Eligibility varies by scheme. Generally, citizens, entrepreneurs, and businesses can apply.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <button id="backToTop" class="back-to-top">Back to Top</button>
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2025 Government of India - All Rights Reserved</p>
+    </footer>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function() {
+    if (localStorage.getItem("theme") === "dark") {
+        $("body").addClass("dark-mode");
+        $("#theme-toggle").text("Light Mode");
+    }
+
+    $("#theme-toggle").click(function() {
+        $("body").toggleClass("dark-mode");
+        if ($("body").hasClass("dark-mode")) {
+            localStorage.setItem("theme", "dark");
+            $(this).text("Light Mode");
+        } else {
+            localStorage.setItem("theme", "light");
+            $(this).text("Dark Mode");
+        }
+    });
+
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 150) {
+            $("#backToTop").fadeIn();
+        } else {
+            $("#backToTop").fadeOut();
+        }
+    });
+
+    $("#backToTop").click(function() {
+        $("html, body").animate({ scrollTop: 0 }, "smooth");
+    });
+});
+    </script>
+</body>
+</html>

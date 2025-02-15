@@ -1,0 +1,210 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Government of India - Banking Services</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            transition: 0.5s;
+        }
+        .hero {
+            background: url('https://www.india.gov.in/sites/upload_files/npi/files/finance.jpg') center/cover no-repeat;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+        .card img {
+            height: 200px;
+            object-fit: cover;
+        }
+        .back-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 20px;
+        background-color: #111;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 5px;
+        display: none;
+    }
+    .back-to-top:hover {
+        background-color: #666;
+    }
+    body.dark-mode {
+            background-color: #222;
+            color: #fff;
+        }
+        .dark-mode .navbar-custom {
+            background-color: #444;
+        }
+        .dark-mode .card {
+            background-color: #333;
+            color: #fff;
+        }
+        .dark-mode footer {
+            background-color: #444;
+        }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+                <p style="color: white;">Govt. of India - Banking Services</p>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="overview.html">Overview</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Schemes.html">Schemes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="nationalbudget.html">National Budget</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contactus.html">Contact</a></li>
+                </ul>
+            </div>
+            <button id="theme-toggle" class="btn btn-dark ms-3">Switch Theme</button>
+
+        </div>
+    </nav>
+    
+    <header class="hero">
+        
+    
+    </header>
+    
+    <section id="banking-services" class="container my-5">
+        <h2 class="text-center">Government Banking Services</h2>
+        <p class="text-center">These services provide access to banking, loans, and financial assistance across India.</p>
+        
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://miro.medium.com/v2/resize:fit:1200/1*Ldb7ZrxCi5nmcxyqiqN8sw.jpeg" class="card-img-top" alt="Public Sector Banks">
+                    <div class="card-body">
+                        <h5 class="card-title">Public Sector Banks</h5>
+                        <p class="card-text">Government-owned banks providing financial services nationwide.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://www.cnet.com/personal-finance/assets/uploads/resize/1149dab9bcfeb6dfe75fc2f7df9ac3db6be6b7a3/m1/2023/06/OnlineBankingGettyImages01-scaled.jpg?auto=webp" class="card-img-top" alt="Online Banking">
+                    <div class="card-body">
+                        <h5 class="card-title">Online Banking</h5>
+                        <p class="card-text">Secure and efficient online banking services for all citizens.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://d1b3667xvzs6rz.cloudfront.net/2024/02/WhatsApp_Image_2024-02-23_at_1.47.06_PM.jpg" class="card-img-top" alt="Financial Inclusion">
+                    <div class="card-body">
+                        <h5 class="card-title">Financial Inclusion</h5>
+                        <p class="card-text">Ensuring banking services reach rural and underserved areas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="faqs" class="container my-5">
+        <h2 class="text-center">FAQs</h2>
+        <div class="accordion" id="faqAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                        What are Public Sector Banks?
+                    </button>
+                </h2>
+                <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Public sector banks are government-owned financial institutions that provide banking services.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                        How can I use Online Banking?
+                    </button>
+                </h2>
+                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Online banking services can be accessed via official bank websites or mobile apps.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                        What is Financial Inclusion?
+                    </button>
+                </h2>
+                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Financial inclusion ensures that financial services are accessible to all, especially in rural areas.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2025 Government of India - All Rights Reserved</p>
+    </footer>
+    <button id="backToTop" class="back-to-top">Back to Top</button>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+       $(document).ready(function() {
+    const body = $("body");
+    const themeToggle = $("#theme-toggle");
+    const backToTop = $("#backToTop");
+
+    if (localStorage.getItem("theme") === "dark") {
+        body.addClass("dark-mode");
+        themeToggle.text("Light Mode");
+    }
+
+    themeToggle.click(function() {
+        body.toggleClass("dark-mode");
+        if (body.hasClass("dark-mode")) {
+            localStorage.setItem("theme", "dark");
+            themeToggle.text("Light Mode");
+        } else {
+            localStorage.setItem("theme", "light");
+            themeToggle.text("Dark Mode");
+        }
+    });
+
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 150) {
+            backToTop.fadeIn();
+        } else {
+            backToTop.fadeOut();
+        }
+    });
+
+    backToTop.click(function() {
+        $("html, body").animate({ scrollTop: 0 }, "smooth");
+    });
+});
+
+    </script>
+</body>
+</html>

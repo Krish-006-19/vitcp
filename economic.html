@@ -1,0 +1,284 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <title>Department of Economic Affairs</title>
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h2 {
+  padding: 0 0 0 1%;
+}
+ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  padding-left: 20px;
+}
+li {
+  padding: 0 0 5px 0;
+}
+li a {
+  color: #fff;
+  text-decoration: none;
+}
+li a:visited {
+  color: aliceblue;
+}
+li a:hover {
+  color: #aaa;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  transition: background-color 0.3s, color 0.3s;
+}
+.dark-mode {
+  background-color: #222;
+  color: #fff;
+}
+header {
+  background-color: #004d7a;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+footer {
+  background-color: #004d7a;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+.image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+img {
+  max-width: 400px;
+  height: 70%;
+  border-radius: 10px;
+}
+.info {
+  text-align: center;
+}
+.theme-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #111;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+}
+.theme-btn:hover {
+  background-color: #666;
+}
+.dark-mode .theme-btn:hover {
+  background-color: #666;
+}
+.dark-mode .theme-btn {
+  background-color: #111;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    padding: 10px;
+    font-size: 18px;
+  }
+  .theme-btn {
+    top: 10px;
+    right: 10px;
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+  img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 8px;
+  }
+  .info, h2, ul {
+    padding: 10px;
+    text-align: left;
+  }
+  ul {
+    margin-left: 10px;
+    padding-left: 10px;
+  }
+  footer {
+    padding: 10px;
+    font-size: 14px;
+  }
+  .footer-links {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+}
+.faq {
+    margin-top: 20px;
+}
+
+.faq h4 {
+    cursor: pointer;
+    background-color: #f8f9fa;
+    color: #000;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.faq-content {
+    display: none;
+    padding: 10px;
+    background-color: #e9ecef;
+    color: #000;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-mode .faq h4 {
+    background-color: #333;
+    color: #fff;
+}
+
+.dark-mode .faq-content {
+    background-color: #444;
+    color: #ddd;
+}
+        .back-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 20px;
+        background-color: #111;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 5px;
+        display: none;
+    }
+    .back-to-top:hover {
+        background-color: #666;
+    }
+  </style>
+</head>
+<body>
+ 
+  <header>
+    <h1>Department of Economic Affairs</h1>
+  </header>
+  <br>
+  <br>
+  <button id="theme-toggle" class="theme-btn">Switch Theme</button>
+  <div class="image">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7hcWCp4jMOVOmiuqAuOY3fVJ6hGp5CTkZtw&s">
+  </div>
+  <br><hr><br>
+  <h2>Key Responsibilities of the Department:</h2>
+  <div>
+    <ul class="res">
+      <li><b>Formulation of Economic Policies:</b><br/> Develops and implements macroeconomic policies to ensure sustainable economic growth.</li>
+      <li><b>Budget Preparation & Fiscal Policy:</b><br/>Oversees the Union Budget, taxation policies, and fiscal management strategies.</li>
+      <li><b>Capital Market Regulation:</b><br/>Supervises stock exchanges, financial institutions, and investment policies.</li>
+      <li><b>External Financial Relations:</b><br/>Manages foreign exchange reserves, international trade policies, and financial agreements with global institutions (IMF, World Bank).</li>
+    </ul>
+  </div>
+  <br><hr><br>
+  <div class="container my-4">
+    <h2>Changes to Economic Affairs in the 2025 Budget Session</h2>
+    <ul>
+        <li><b>Boost to Infrastructure Investment :</b><br/>A 20% increase in public infrastructure spending to accelerate economic growth and job creation.</li>
+        <li><b>Revised Taxation Policies:</b> <br/>New tax reforms introduced to encourage foreign direct investment (FDI) and ease compliance for businesses.</li>
+    </ul>
+</div>
+<div class="container my-4 faq">
+    <h2>Frequently Asked Questions</h2>
+    <h4>How will the 2025 budget impact economic growth?</h4>
+    <div class="faq-content">The budget prioritizes infrastructure investment, tax reforms, and digital economy expansion, leading to increased job creation and economic stability.</div>
+    <h4>What measures are being taken to control inflation?</h4>
+    <div class="faq-content">The government has introduced revised monetary policies in collaboration with the RBI, focusing on interest rate adjustments and market liquidity management.</div>
+    <h4> How does the budget support MSMEs and startups?</h4>
+    <div class="faq-content"> The budget provides financial incentives, low-interest loans, and simplified tax structures to promote the growth of small businesses and entrepreneurship.</div>
+</div>
+
+    <br>
+    <footer>
+    <div class="footer-links">
+      <div>
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+              <li><a href="home.html">Home</a></li>
+              <li><a href="overview.html">Overview</a></li>
+          </ul>
+      </div>
+      <div>
+          <h5>Visitor's Summary</h5>
+          <ul class="list-unstyled">
+              <li><a href="Schemes.html">Schemes</a></li>
+              <li><a href="contactus.html">Contact Us</a></li>
+          </ul>
+      </div>
+  </div>
+  <button id="backToTop" class="back-to-top">Back to Top</button>
+</footer>
+  <script>
+    $(document).ready(function() {
+    const body = $("body");
+    const themeToggle = $("#theme-toggle");
+    const backToTop = $("#backToTop");
+    const faqs = $(".faq h4");
+
+    if (localStorage.getItem("theme") === "dark") {
+        body.addClass("dark-mode");
+        themeToggle.text("Light Mode");
+    }
+
+    themeToggle.click(function() {
+        body.toggleClass("dark-mode");
+        if (body.hasClass("dark-mode")) {
+            localStorage.setItem("theme", "dark");
+            themeToggle.text("Light Mode");
+        } else {
+            localStorage.setItem("theme", "light");
+            themeToggle.text("Dark Mode");
+        }
+    });
+
+    faqs.click(function() {
+        $(this).next().slideToggle();
+    });
+
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 150) {
+            backToTop.fadeIn();
+        } else {
+            backToTop.fadeOut();
+        }
+    });
+
+    backToTop.click(function() {
+        $("html, body").animate({ scrollTop: 0 }, "smooth");
+    });
+});
+
+
+</script>
+</body>
+</html>

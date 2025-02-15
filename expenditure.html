@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Department of Expenditure</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h2 {
+  padding: 0 0 0 1%;
+}
+ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  padding-left: 20px;
+}
+li {
+  padding: 0 0 5px 0;
+}
+li a {
+  color: #fff;
+  text-decoration: none;
+}
+li a:visited {
+  color: aliceblue;
+}
+li a:hover {
+  color: #aaa;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  transition: background-color 0.3s, color 0.3s;
+}
+.dark-mode {
+  background-color: #222;
+  color: #fff;
+}
+header {
+  background-color: #004d7a;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+footer {
+  background-color: #004d7a;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+.image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+img {
+  max-width: 400px;
+  height: 70%;
+  border-radius: 10px;
+}
+.info {
+  text-align: center;
+}
+.theme-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #111;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+}
+.theme-btn:hover {
+  background-color: #666;
+}
+.dark-mode .theme-btn:hover {
+  background-color: #666;
+}
+.dark-mode .theme-btn {
+  background-color: #111;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    padding: 10px;
+    font-size: 18px;
+  }
+  .theme-btn {
+    top: 10px;
+    right: 10px;
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+  img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 8px;
+  }
+  .info, h2, ul {
+    padding: 10px;
+    text-align: left;
+  }
+  ul {
+    margin-left: 10px;
+    padding-left: 10px;
+  }
+  footer {
+    padding: 10px;
+    font-size: 14px;
+  }
+  .footer-links {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+}
+.faq {
+    margin-top: 20px;
+}
+
+.faq h4 {
+    cursor: pointer;
+    background-color: #f8f9fa;
+    color: #000;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.faq-content {
+    display: none;
+    padding: 10px;
+    background-color: #e9ecef;
+    color: #000;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-mode .faq h4 {
+    background-color: #333;
+    color: #fff;
+}
+
+.dark-mode .faq-content {
+    background-color: #444;
+    color: #ddd;
+}
+        .back-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 20px;
+        background-color: #111;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 5px;
+        display: none;
+    }
+    .back-to-top:hover {
+        background-color: #666;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Department of Expenditure</h1>
+  </header>
+  <button id="theme-toggle" class="theme-btn">Switch Theme</button>
+  <br>
+  <div class="image">
+    <img src="https://doe.gov.in/files/home_page_banner/Banner_doe-home.jpg">
+  </div>
+  <div class="info">
+    <p><b>The Department of Expenditure (DoE) is responsible for managing the public financial system of the Government of India. It formulates policies related to budgeting, expenditure management, and financial oversight of central ministries and state finances.</b></p>
+  </div>
+  <br><hr><br>
+  <h2>Key Responsibilities of the Department:</h2>
+  <div>
+    <ul class="res">
+      <li><b>Budgeting & Financial Planning:</b><br/> Oversees the allocation and utilization of funds in government ministries.</li>
+      <li><b>Expenditure Monitoring:</b><br/> Ensures effective and efficient use of public money for various government projects.</li>
+      <li><b>Finance Commission Implementation:</b><br/> Implements recommendations of the Finance Commission regarding fund distribution.</li>
+      <li><b> State Government Finance:</b><br/> Assists states in maintaining fiscal discipline and managing financial resources.</li>
+    </ul>
+  </div>
+  <br><hr><br>
+  <div class="container my-4">
+    <h2>Changes to Expenditure in the 2025 Budget Session</h2>
+    <ul>
+        <li><span class="highlight">Tax Reforms:</span> Adjustments in tax slabs and exemptions to benefit middle-income groups.</li>
+        <li><span class="highlight">Nuclear Energy Mission:</span> Increased funding for nuclear energy research and development.</li>
+    </ul>
+</div>
+<div class="container my-4 faq">
+    <h2>Frequently Asked Questions</h2>
+    <h4>What are the key changes in tax reforms?</h4>
+    <div class="faq-content">The 2025 budget introduces new tax slabs and exemptions, reducing the burden on middle-income groups.</div>
+    <h4>How will the Nuclear Energy Mission impact the economy?</h4>
+    <div class="faq-content">Increased funding will boost research and development, leading to energy sustainability and economic growth.</div>
+    <h4>What measures are in place to ensure efficient budget allocation?</h4>
+    <div class="faq-content">The government has implemented strict monitoring and auditing mechanisms to track expenditure efficiency.</div>
+</div>
+
+    <br>
+    <footer>
+    <div class="footer-links">
+      <div>
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+              <li><a href="home.html">Home</a></li>
+              <li><a href="overview.html">Overview</a></li>
+          </ul>
+      </div>
+      <div>
+          <h5>Visitor's Summary</h5>
+          <ul class="list-unstyled">
+              <li><a href="Schemes.html">Schemes</a></li>
+              <li><a href="contactus.html">Contact Us</a></li>
+          </ul>
+      </div>
+  </div>
+  <button id="backToTop" class="back-to-top">Back to Top</button>
+</footer>
+  <script>
+    $(document).ready(function() {
+            if (localStorage.getItem("theme") === "dark") {
+                $("body").addClass("dark-mode");
+                $("#theme-toggle").text("Light Mode");
+            }
+            $("#theme-toggle").click(function() {
+                $("body").toggleClass("dark-mode");
+                if ($("body").hasClass("dark-mode")) {
+                    localStorage.setItem("theme", "dark");
+                    $("#theme-toggle").text("Light Mode");
+                } else {
+                    localStorage.setItem("theme", "light");
+                    $("#theme-toggle").text("Dark Mode");
+                }
+            });
+            $('.faq h4').click(function() {
+                $(this).next('.faq-content').slideToggle();
+            });
+
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 300) {
+                $('#backToTop').fadeIn();
+            } else {
+                $('#backToTop').fadeOut();
+            }
+        });
+
+        $('#backToTop').click(function() {
+            $('html, body').animate({ scrollTop: 0 }, 600);
+        });
+    });
+  </script>
+</body>
+</html>

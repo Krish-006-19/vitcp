@@ -1,0 +1,214 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>National Budget - Government of India</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            transition: 0.5s;
+        }
+        body.dark-mode {
+            background-color: #222;
+            color: #fff;
+        }
+        .dark-mode .navbar-custom {
+            background-color: #444;
+        }
+        .dark-mode .card {
+            background-color: #333;
+            color: #fff;
+        }
+        .dark-mode footer {
+            background-color: #444;
+        }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+        }.back-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 20px;
+        background-color: #111;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 5px;
+        display: none;
+    }
+    .back-to-top:hover {
+        background-color: #666;
+    }
+
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+                <p style="color: white;">Govt. of India - Banking Services</p>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="banking.html">Banking</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Schemes.html">Schemes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="overview.html">overview</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contactus.html">Contact</a></li>
+                </ul>
+            </div>
+            
+<button id="theme-toggle" class="btn btn-dark ms-3">Switch Theme</button>
+        </div>
+    </nav>
+
+    <header class="bg-success text-white text-center py-5">
+        <div class="container">
+            <h1>National Budget of India</h1>
+            <p>An overview of India's national budget, including key highlights, allocation, and financial planning.</p>
+        </div>
+    </header>
+
+    <section id="budget-overview" class="container my-5">
+        <h2 class="text-center">Budget Highlights</h2>
+        <p class="text-center">The national budget covers allocations for sectors like defense, education, healthcare, and infrastructure.</p>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://www.newsbharati.com/Encyc/2023/2/2/budget_202302021748490861_H@@IGHT_0_W@@IDTH_600.png" class="card-img-top" alt="Defense Budget">
+                    <div class="card-body">
+                        <h5 class="card-title">Defense Allocation</h5>
+                        <p class="card-text">A key focus on enhancing India's defense capabilities and security infrastructure.</p>
+                        <a href="defence.html"><button class="btn btn-primary" id="defense-btn">Learn More</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202502/india-education-budget-053844872-16x9_0.jpeg?VersionId=osMxfacox19US1KeUEJbDXfz7sMU16E7" class="card-img-top" alt="Education Budget">
+                    <div class="card-body">
+                        <h5 class="card-title">Education Allocation</h5>
+                        <p class="card-text">Funding for education reforms, school infrastructure, and skill development programs.</p>
+                        <a href="education.html"><button class="btn btn-primary" id="education-btn">Learn More</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://www.avisystems.com/hubfs/Imported_Blog_Media/health-care-trends-budget-planning.png" class="card-img-top" alt="Healthcare Budget">
+                    <div class="card-body">
+                        <h5 class="card-title">Healthcare Allocation</h5>
+                        <p class="card-text">Increasing healthcare funding to improve public health systems and welfare programs.</p>
+                        <a href="healthcare.html"><button class="btn btn-primary" id="healthcare-btn">Learn More</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Budget Details -->
+    <section id="detailed-budget" class="container my-5">
+        <h2 class="text-center">Detailed Budget Overview</h2>
+        <p class="text-center">A deeper insight into various budget allocations and financial strategies.</p>
+
+        <div class="accordion" id="budgetAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                        Infrastructure Development
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#budgetAccordion">
+                    <div class="accordion-body">
+                        The government has allocated significant funds to modernize roadways, railways, and urban development projects to boost economic growth.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                        Agriculture & Rural Economy
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#budgetAccordion">
+                    <div class="accordion-body">
+                        Investments in irrigation, crop insurance, and rural employment schemes aim to enhance the livelihood of farmers and boost agricultural productivity.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                        Digital & Technology Sector
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#budgetAccordion">
+                    <div class="accordion-body">
+                        The budget focuses on AI, cybersecurity, and digital transformation to enhance India’s technological capabilities and startup ecosystem.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <button id="backToTop" class="back-to-top">Back to Top</button>
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2025 Government of India - All Rights Reserved</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#defense-btn").click(function () {
+                alert("Redirecting to detailed Defense Allocation page...");
+            });
+            $("#education-btn").click(function () {
+                alert("Redirecting to detailed Education Allocation page...");
+            });
+            $("#healthcare-btn").click(function () {
+                alert("Redirecting to detailed Healthcare Allocation page...");
+            });
+            if (localStorage.getItem("theme") === "dark") {
+                $("body").addClass("dark-mode");
+                $("#theme-toggle").text("Light Mode");
+            }
+            $("#theme-toggle").click(function() {
+                $("body").toggleClass("dark-mode");
+                if ($("body").hasClass("dark-mode")) {
+                    localStorage.setItem("theme", "dark");
+                    $("#theme-toggle").text("Light Mode");
+                } else {
+                    localStorage.setItem("theme", "light");
+                    $("#theme-toggle").text("Dark Mode");
+                }
+            });
+
+$(window).scroll(function() {
+            if ($(this).scrollTop() > 150) {
+                $('#backToTop').fadeIn();
+            } else {
+                $('#backToTop').fadeOut();
+            }
+        });
+
+        $('#backToTop').click(function() {
+            $('html, body').animate({ scrollTop: 0 }, 600);
+        });
+    });
+    </script>
+</body>
+
+</html>
