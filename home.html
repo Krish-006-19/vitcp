@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -127,7 +128,25 @@ img {
             justify-content: center;
             gap: 50px;
         }
-        .back-to-top {
+        body.dark-mode {
+            background-color: #222;
+            color: #fff;
+        }
+        .dark-mode .navbar-custom {
+            background-color: #444;
+        }
+        .dark-mode .card {
+            background-color: #333;
+            color: #fff;
+        }
+        .dark-mode footer {
+            background-color: #444;
+        }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+        }.back-to-top {
         position: fixed;
         bottom: 20px;
         right: 20px;
@@ -154,10 +173,11 @@ img {
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#">Overview</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Schemes</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Banking</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="overview.html">Overview</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Schemes.html">Schemes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="banking.html">Banking</a></li>
+                    <li class="nav-item"><a class="nav-link" href="nationalbudget.html">National Budget</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contactus.html">Contact Us</a></li>
                 </ul>
                 <button id="theme-toggle" class="btn btn-dark ms-3">Switch Theme</button>
             </div>
@@ -247,47 +267,30 @@ img {
                  <p>Department of Financial Services (DFS) being the nodal Department of Banking, Financial Services, and Insurance (BFSI) sector administers various Acts related to the banking, insurance and pension sectors. The Department also executes various initiatives and reforms of the Government concerning the banking, insurance and pension sectors in India including adoption of technology and cybersecurity related matters to ensure ease, availability and security of financial services to the citizens of the country. Besides the Department also implements many flagship financial inclusion schemes of the Government extending the benefit of various financial services to the marginalised sections of the society.</p>
              </div>
 
-    
              <button id="backToTop" class="back-to-top">Back to Top</button>
+
+
     <footer>
         <div class="footer" style=" background-color:#007bff">
             <div style="display:flex;justify-content:space-evenly">
     <div class="container" style="display:flex;justify-content:space-around;background-color:#007bff;margin:0">
                 
-                <div class="footer-section">
-                    <h3>Website Policies</h3>
-                    <ul>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Use</a></li>
-                        <li><a href="#">Terms and conditions </a></li>
-                    </ul>
-                </div>
+                
         
                 
                 <div class="footer-section">
                     <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Overview</a></li>
-                    </ul>
+                            <a href="banking.html" style="display: block;color: white;">Banking</a>
+                            <a href="overview.html" style="display: block;color: white;">Overview</a>
                 </div>
         
                 
-                <div class="footer-section">
-                    <h3>Help &amp; Feedback</h3>
-                    <ul>
-                        <li><a href="#">Help</a></li>
-                        <li><a href="#">Feedback</a></li>
-                    </ul>
-                </div>
+                
 
                 <div class="footer-section">
                     <h3>Visitor's summary</h3>
-                    <ul>
-                        <li><a href="#">Schemes</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Contact us </a></li>
-                    </ul>
+                            <a href="Schemes.html" style="display: block;color: white;">Schemes</a>
+                            <a href="contactus.html" style="display: block;color: white;">Contact us </a>
                 </div>
             </div>
 </div>
@@ -302,38 +305,62 @@ img {
     </footer>
 
     <script>
-        $(document).ready(function() {
-            if (localStorage.getItem("theme") === "dark") {
-                $("body").addClass("dark-mode");
-                $("#theme-toggle").text("Light Mode");
-            }
-            $("#theme-toggle").click(function() {
-                $("body").toggleClass("dark-mode");
-                if ($("body").hasClass("dark-mode")) {
-                    localStorage.setItem("theme", "dark");
-                    $("#theme-toggle").text("Light Mode");
-                } else {
-                    localStorage.setItem("theme", "light");
-                    $("#theme-toggle").text("Dark Mode");
-                }
-            });
-            $(".card").hover(function() {
-                $(this).css("box-shadow", "0px 4px 10px rgba(0,0,0,0.2)");
-            }, function() {
-                $(this).css("box-shadow", "none");
-            });
-        });
-        $(window).scroll(function() {
-            if ($(this).scrollTop() > 300) {
-                $('#backToTop').fadeIn();
-            } else {
-                $('#backToTop').fadeOut();
-            }
-        });
+        $(document).ready(function () {
+    $("#mudraForm").submit(function (event) {
+        event.preventDefault();
+        $("#successMessage").fadeIn();
+        setTimeout(() => $("#successMessage").fadeOut(), 3000);
+        this.reset();
+    });
 
-        $('#backToTop').click(function() {
-            $('html, body').animate({ scrollTop: 0 }, 600);
-        });
+    $("#pmayForm").submit(function (event) {
+        event.preventDefault();
+        $("#successMessage").fadeIn();
+        setTimeout(() => $("#successMessage").fadeOut(), 3000);
+        this.reset();
+    });
+
+    $("#budget-btn").click(function () {
+        alert("Redirecting to National Budget page...");
+    });
+
+    $("#policies-btn").click(function () {
+        alert("Redirecting to Economic Policies page...");
+    });
+
+    $("#taxation-btn").click(function () {
+        alert("Redirecting to Taxation page...");
+    });
+
+    if (localStorage.getItem("theme") === "dark") {
+        $("body").addClass("dark-mode");
+        $("#theme-toggle").text("Light Mode");
+    }
+
+    $("#theme-toggle").click(function () {
+        $("body").toggleClass("dark-mode");
+        if ($("body").hasClass("dark-mode")) {
+            localStorage.setItem("theme", "dark");
+            $(this).text("Light Mode");
+        } else {
+            localStorage.setItem("theme", "light");
+            $(this).text("Dark Mode");
+        }
+    });
+
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 150) {
+            $("#backToTop").fadeIn();
+        } else {
+            $("#backToTop").fadeOut();
+        }
+    });
+
+    $("#backToTop").click(function () {
+        $("html, body").animate({ scrollTop: 0 }, "smooth");
+    });
+});
+
     </script>
 </body>
 </html>
